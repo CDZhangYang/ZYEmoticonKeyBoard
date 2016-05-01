@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KEa-3t-Cz7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ib8-u2-0dl">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="lrU-aq-H6E">
+                            <connections>
+                                <segue destination="ATS-1p-Xyy" kind="show" id="2vA-rB-pAy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="863"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="wTx-2g-pYD">
+            <objects>
+                <viewController id="ATS-1p-Xyy" customClass="ViewController" customModule="EmoticonKeyBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fcA-aS-0Ii"/>
+                        <viewControllerLayoutGuide type="bottom" id="0gd-i6-Zaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hiL-Bn-n79">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T0Q-MW-cMR">
+                                <rect key="frame" x="0.0" y="64" width="600" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ixN-JV-gLo"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T0Q-MW-cMR" firstAttribute="top" secondItem="fcA-aS-0Ii" secondAttribute="bottom" id="5mW-gZ-ujB"/>
+                            <constraint firstItem="T0Q-MW-cMR" firstAttribute="leading" secondItem="hiL-Bn-n79" secondAttribute="leading" id="DUJ-4A-sy7"/>
+                            <constraint firstAttribute="trailing" secondItem="T0Q-MW-cMR" secondAttribute="trailing" id="SOV-EJ-dgA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="J7K-LI-Wvr">
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="ir7-aY-FfN">
+                            <connections>
+                                <action selector="btnClick:" destination="ATS-1p-Xyy" id="7V3-FW-8eE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="T0Q-MW-cMR" id="q9b-bH-FQQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPz-vv-xBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="623"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t2G-7F-Xcf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KEa-3t-Cz7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Or-RC-52n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ehv-Nr-vjb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PyS-Px-NdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="999"/>
+        </scene>
+    </scenes>
+</document>
