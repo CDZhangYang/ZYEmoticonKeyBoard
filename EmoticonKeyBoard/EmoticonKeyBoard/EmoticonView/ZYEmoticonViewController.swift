@@ -161,8 +161,7 @@ extension ZYEmoticonViewController : UICollectionViewDataSource, UICollectionVie
 
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ZYEmoticonCellReuseIdentifier, forIndexPath: indexPath) as! ZYEmoticonViewCell
         currentSection = indexPath.section
-        print("indexPath.section = \(indexPath.section)")
-        print("indexPath.item = \(indexPath.item)")
+        
         let emoticonGroup = emoticonGroups[indexPath.section]
         
         cell.emoticon = emoticonGroup.emoticonModels![indexPath.item]
@@ -225,24 +224,7 @@ extension ZYEmoticonViewController : UICollectionViewDataSource, UICollectionVie
         if index != lastIndex {
 
             pageIndicator.numberOfPages = emoticonGroups[currentSection].pages
-            print("翻页")
-            //[1 6 4 2]
-            
-            //[-]
-            //[0]
-            
-            //[0 1 2 3 4 5 ]
-            //[1 2 3 4 5 6 ]
-            
-            //[0 1 2 3]
-            //[7 8 9 10]
-            
-            //[0  1]
-            //[11 12]
-            
-            //计算的当前第几页
-            
-            //找到当前第几组（4）
+
             var b = 0
             //得到之前组的页数的总和
             for i in 0 ..< currentSection {
